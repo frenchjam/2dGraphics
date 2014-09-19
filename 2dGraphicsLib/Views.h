@@ -215,6 +215,11 @@ void ViewAutoScaleSetInterval( View view, double interval );
 
 void ViewPlotChars ( View view, char *array, 
 		     unsigned start, unsigned end, unsigned size );
+void ViewPlotAvailableChars ( View view, char *array, 
+							 unsigned start, unsigned end, 
+							 unsigned size, int NA );
+
+
 void ViewPlotShorts ( View view, short *array, 
 		      unsigned start, unsigned end, unsigned size );
 void ViewPlotInts ( View view, int *array, 
@@ -243,15 +248,16 @@ void ViewPointPlotAvailableDoubles ( View view, double *array,
 				unsigned start, unsigned end, 
 				unsigned size, double NA );
 
+
+void ViewBoxPlotChars (View view, char *array, 
+			unsigned start, unsigned end, unsigned size );
 void ViewBoxPlotShorts (View view, short *array, 
 			unsigned start, unsigned end, unsigned size );
-
 void ViewBoxPlotInts (View view, int *array, 
-
 			unsigned start, unsigned end, unsigned size );
-
 void ViewBoxPlotFloats (View view, float *array, 
 			unsigned start, unsigned end, unsigned size );
+
 
 void ViewXYPlotInts (View view, int *xarray, int *yarray, 
 		     unsigned start, unsigned end, 

@@ -369,6 +369,28 @@ void ViewPlotChars ( View view, char *array,
   }
 }
 
+/***************************************************************************/
+
+void ViewPlotAvailableChars ( View view, char *array, 
+							 unsigned start, unsigned end, 
+							 unsigned size, int NA ) {
+  register unsigned i;
+  register char  	*pt;
+  int penon = NO;
+
+  for (i = start; i <= end; i++) {
+
+    pt = (char *)(((char *) array) + i * size);
+    if ( *pt != NA ) {
+      if ( penon == YES ) ViewLineTo( view, (double) i, (double) *pt);
+      else ViewMoveTo( view, (double) i, (double) *pt );
+      penon = YES;
+    }
+    else penon = NO;
+
+  }
+}
+
 /*****************************************************************************/
 
 /*
@@ -692,6 +714,36 @@ void ViewBoxPlotFloats (View view, float *array,
   pt = (float *)(((char *) array) + end * size);
   ViewLineTo(view, (double) end - 0.5, (double) *pt);
   ViewLineTo(view, (double) end, (double) *pt);
+	
+}
+
+/***************************************************************************/
+
+void ViewBoxPlotChars (View view, char *array, 
+			unsigned start, unsigned end, unsigned size ) {
+					
+  register unsigned i;
+  register char		*pt;
+
+  pt = (char *)(((char *) array) + start * size);
+  ViewMoveTo(view, (double) start,  0.0 );
+  ViewLineTo(view, (double) start,  (double) *pt);
+  ViewLineTo(view, (double) start + 0.5,  (double) *pt);
+  ViewLineTo(view, (double) start + 0.5,  0.0 );
+
+  for (i = start + 1; i <= end - 1; i++) {
+
+    pt = (char *)(((char *) array) + i * size);
+    ViewLineTo(view, (double) i - 0.5, (double) *pt);
+    ViewLineTo(view, (double) i + 0.5, (double) *pt);
+    ViewLineTo(view, (double) i + 0.5, 0.0 );
+	
+  }
+
+  pt = (char *)(((char *) array) + end * size);
+  ViewLineTo(view, (double) end - 0.5, (double) *pt);
+  ViewLineTo(view, (double) end, (double) *pt);
+  ViewLineTo(view, (double) end, 0.0 );
 	
 }
 
