@@ -1,0 +1,59 @@
+Microsoft Developer Studio Workspace File, Format Version 6.00
+# WARNING: DO NOT EDIT OR DELETE THIS WORKSPACE FILE!
+
+###############################################################################
+
+Project: "2dGraphicsLib"=.\2dGraphics\2dGraphicsLib\2dGraphicsLib.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Project: "2dGraphicsTest"=.\2dGraphics\2dGraphicsTest\2dGraphicsTest.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+    Begin Project Dependency
+    Project_Dep_Name 2dGraphicsLib
+    End Project Dependency
+    Begin Project Dependency
+    Project_Dep_Name nrd
+    End Project Dependency
+}}}
+
+###############################################################################
+
+Project: "nrd"=.\NRD\nrd.dsp - Package Owner=<4>
+
+Package=<5>
+{{{
+}}}
+
+Package=<4>
+{{{
+}}}
+
+###############################################################################
+
+Global:
+
+Package=<5>
+{{{
+}}}
+
+Package=<3>
+{{{
+}}}
+
+###############################################################################
+

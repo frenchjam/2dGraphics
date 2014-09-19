@@ -1,0 +1,4 @@
+2dGraphicsLib
+
+A library of routines to do simple 2D graphs.
+It is object oriented, with the idea of having a device independent layer.
