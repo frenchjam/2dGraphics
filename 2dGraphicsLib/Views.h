@@ -88,8 +88,7 @@ void ViewShiftRelative ( View view, double x, double y );
 
 View ViewDisplayPointInside( View view, int x, int y );
 
-void ViewSetEdges (View view, double left, double bottom, 
-		   double right, double top);
+void ViewSetEdges (View view, double left, double bottom, double right, double top);
 void ViewSetXLimits (View view, double left, double right );
 void ViewSetYLimits (View view, double left, double right );
 
@@ -103,21 +102,15 @@ void ViewSetPseudoColorPixels( View view, int x_pixels, int y_pixels );
 void ViewPlotPseudoColor( View view, double x, double y, double value );
 
 void ViewCenterZeroY( View view );
-
-
 void ViewMakeSquare (View view);
 
 
 void ViewErase (View view);
 
 void ViewBox (View view);
-
 void ViewSlash (View view);
-
 void ViewLineStyle (View view, int style);
-
 void ViewLinePattern (View view, int pattern);
-
 void ViewAlu (View view, int alu);
 
 void ViewColor (View view, int color);
@@ -140,14 +133,10 @@ void ViewVerticalLine( View view, double x );
 void ViewHorizontalLine( View view, double y );
 void ViewXTick( View view, double x );
 
-
 void ViewPoint (View view, double x, double y);
 void ViewMoveTo (View view, double x, double y);
 void ViewLineTo (View view, double x, double y);
-void ViewLine (View view, double from_x, double from_y, 
-	       double to_x, double to_y);
-
-
+void ViewLine (View view, double from_x, double from_y, double to_x, double to_y);
 
 void ViewRectangle (View view, double x1, double y1, double x2, double y2);
 void ViewFilledRectangle (View view, double x1, double y1, double x2, double y2);
