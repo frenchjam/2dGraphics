@@ -192,10 +192,15 @@ void ViewAutoScaleInts ( View view, int *array,
 void ViewAutoScaleFloats ( View view, float *array, 
 			   unsigned start, unsigned end, unsigned size );
 void ViewAutoScaleAvailableFloats ( View view, float *array, 
-
 				     unsigned start, unsigned end, unsigned size,
-
 				     float NA );
+void ViewAutoScaleMostDoubles ( View view,
+					double *array, 
+					unsigned start, 
+					unsigned end, 
+					unsigned size,
+					double NA,
+					double exclude );
 
 void ViewAutoScaleDoubles ( View view, double *array, 
 			    unsigned start, unsigned end, unsigned size );
@@ -208,7 +213,7 @@ void ViewAutoScaleMostDoubles ( View view,
 					unsigned end, 
 					unsigned size,
 					double NA,
-          double exclude );
+                    double exclude );
 
 void ViewAutoScaleExpand( View view, double fraction );
 void ViewAutoScaleSetInterval( View view, double interval );
